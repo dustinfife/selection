@@ -1,0 +1,36 @@
+\name{rel.correction}
+\alias{rel.correction}
+\title{Corrects a correlation for unreliability}
+\usage{
+  rel.correction(rxyi, rxxi = NULL, ryyi = NULL)
+}
+\arguments{
+  \item{rxyi}{the obtained restricted correlation
+  coefficient (obtained from the incumbents).}
+
+  \item{rxxi}{the obtained reliability of x in the sample}
+
+  \item{ryyi}{the obtained reliability of y in the sample}
+}
+\value{
+  returns a scalar that is the corrected correlation.
+}
+\description{
+  \code{rel.correction} corrects obtained correlation for
+  unreliability.
+}
+\details{
+  do later
+}
+\examples{
+rel.correction(rxyi=.3, rxxi=.8)
+	rel.correction(rxyi=.3, rxxi=.8, ryyi=.6)
+	rel.correction(rxyi=.3, ryyi=.6)
+}
+\author{
+  Dustin Fife
+}
+\references{
+  %% ~put references to the literature/web site here ~
+}
+
