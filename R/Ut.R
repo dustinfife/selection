@@ -15,4 +15,4 @@
 Ut = function(rxxi, rxxa, ux){
 	ut = sqrt(ux^2*(rxxi/rxxa))
 	return(ut)
-	}
+}

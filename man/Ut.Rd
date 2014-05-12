@@ -2,7 +2,7 @@
 \alias{Ut}
 \title{Compute the unrestricted variance of T.}
 \usage{
-  Ut(rxxi, rxxa, ux)
+Ut(rxxi, rxxa, ux)
 }
 \arguments{
   \item{rxxi}{the reliability estimate of x in the
@@ -14,20 +14,20 @@
   \item{ux}{The unrestricted variance of X}
 }
 \value{
-  a value indicating the unresticted variance of T
+a value indicating the unresticted variance of T
 }
 \description{
-  Given reliability estimates in the population and in the
-  sample, as well as the variance of X, \code{Ut} estimates
-  the unrestricted variance of T.
+Given reliability estimates in the population and in the
+sample, as well as the variance of X, \code{Ut} estimates
+the unrestricted variance of T.
 }
 \examples{
 Ut(.6, .8, 1.5)
 }
 \author{
-  Dustin Fife
+Dustin Fife
 }
 \seealso{
-  \code{\link{case.IV}}
+\code{\link{case.IV}}
 }
 

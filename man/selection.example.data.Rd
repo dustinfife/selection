@@ -8,23 +8,22 @@
 vector} \item{list("Performance")}{a numeric vector} \item{list("R")}{a
 numeric vector} }}
 \source{
-  %% ~~ reference to a publication or URL from which the
-  data were obtained ~~
+%% ~~ reference to a publication or URL from which the data
+were obtained ~~
 }
 \description{
-  %% ~~ A concise (1-5 lines) description of the dataset.
-  ~~
+%% ~~ A concise (1-5 lines) description of the dataset. ~~
 }
 \details{
-  %% ~~ If necessary, more details than the __description__
-  above ~~
+%% ~~ If necessary, more details than the __description__
+above ~~
 }
 \examples{
 data(selection.example.data)
 ## maybe str(selection.example.data) ; plot(selection.example.data) ...
 }
 \references{
-  %% ~~ possibly secondary sources and usages ~~
+%% ~~ possibly secondary sources and usages ~~
 }
 \keyword{datasets}
 

@@ -20,6 +20,7 @@
 #' @return a scalar that is the unbiased estimate of the correlation between T
 #' and P.
 #' @author Dustin Fife
+#' @export
 #' @seealso \code{\link{caseIV}}, \code{\link{caseIII}}, \code{\link{em}},
 #' \code{\link{rel.correction}}
 #' @references Thorndike, R. L. (1949). Personnel selection: Test and

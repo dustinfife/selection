@@ -13,6 +13,7 @@
 #' \code{\link{caseIII}}
 #' @references %% ~put references to the literature/web site here ~
 #' @export
+#' @import norm
 #' @examples
 #' 
 #' data(selection.example.data)

@@ -13,6 +13,7 @@
 #' @return a scalar that is the unbiased estimate of the correlation between X
 #' and Y.
 #' @author Dustin Fife
+#' @export
 #' @seealso \code{\link{caseIV}}, \code{\link{caseIIIR}}, \code{\link{em}},
 #' \code{\link{rel.correction}}
 #' @references Thorndike, R. L. (1949). Personnel selection: Test and

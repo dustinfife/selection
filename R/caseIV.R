@@ -12,6 +12,7 @@
 #' @param ux the ratio of selected to unselected variance in x.
 #' @return a scalar that is the estimate of the correlation between t and p.
 #' @author Dustin Fife
+#' @export
 #' @seealso See Also \code{\link{rel.correction}} to obtain estimates of rtpi
 #' from rxyi, \code{\link{caseIII}}, \code{\link{em}}, \code{\link{caseIIIR}}
 #' @references Hunter, J. E., & Schmidt, F. L. (2004). Methods of

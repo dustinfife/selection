@@ -1,2 +1,7 @@
 export(Ut)
+export(caseII)
+export(caseIII)
+export(caseIIIR)
+export(caseIV)
 export(em)
+import(norm)

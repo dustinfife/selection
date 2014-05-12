@@ -2,21 +2,21 @@
 \alias{em}
 \title{Estimate correlations with the EM}
 \usage{
-  em(data.matrix)
+em(data.matrix)
 }
 \arguments{
   \item{data.matrix}{a matrix where the rows consist of
   observations and the columns consist of variables}
 }
 \value{
-  returns a corrected correlation between the variables
+returns a corrected correlation between the variables
 }
 \description{
-  This function estimates unattenuated correlations using
-  the EM algorithm.
+This function estimates unattenuated correlations using the
+EM algorithm.
 }
 \details{
-  later.
+later.
 }
 \examples{
 data(selection.example.data)
@@ -24,14 +24,14 @@ corrected.cor.matrix = em(selection.example.data)
 corrected.cor.matrix
 }
 \author{
-  Dustin Fife
+Dustin Fife
 }
 \references{
-  %% ~put references to the literature/web site here ~
+%% ~put references to the literature/web site here ~
 }
 \seealso{
-  See Also as \code{\link{rel.correction}} to correct the
-  estimate for unreliability, \code{\link{caseIV}},
-  \code{\link{caseIIIR}}, \code{\link{caseIII}}
+See Also as \code{\link{rel.correction}} to correct the
+estimate for unreliability, \code{\link{caseIV}},
+\code{\link{caseIIIR}}, \code{\link{caseIII}}
 }
 
