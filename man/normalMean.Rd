@@ -1,0 +1,39 @@
+\name{normalMean}
+\alias{normalMean}
+\title{Compute mean of truncated normal}
+\usage{
+normalMean(cutoff, mean = 0, sd = 1)
+}
+\arguments{
+  \item{cutoff}{The cutoff value for the truncated normal}
+
+  \item{mean}{The mean of the non-truncated distribution
+  (defaults to zero)}
+
+  \item{sd}{The sd of the non-truncated distribution
+  (defaults to 1)}
+}
+\value{
+the mean of the tuncated normal distribution
+}
+\description{
+Given a particular cutoff (\code{x}), what is the mean of
+the new truncated normal?
+}
+\details{
+The mean of a pdf (f(x)) is computed by integrating the
+function x*f(x) from -Inf to Inf. To compute a truncated
+normal, the function remains the same, but the limits
+change (from -Inf to \code{cutoff}).
+}
+\examples{
+### compute mean of a distribution cutoff at mean
+normalMean(0, 0, 1)
+### compare to simulated data
+x = rnorm(1000000, 0, 1)
+mean(x[x>0])
+}
+\author{
+Dustin Fife
+}
+

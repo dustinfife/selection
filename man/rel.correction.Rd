@@ -19,9 +19,6 @@ returns a scalar that is the corrected correlation.
 \code{rel.correction} corrects obtained correlation for
 unreliability.
 }
-\details{
-do later
-}
 \examples{
 rel.correction(rxyi=.3, rxxi=.8)
 	rel.correction(rxyi=.3, rxxi=.8, ryyi=.6)
@@ -29,8 +26,5 @@ rel.correction(rxyi=.3, rxxi=.8)
 }
 \author{
 Dustin Fife
-}
-\references{
-%% ~put references to the literature/web site here ~
 }
 

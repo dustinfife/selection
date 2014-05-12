@@ -7,7 +7,6 @@
 ##' @param cutoff The cutoff value for the truncated normal
 ##' @param mean The mean of the non-truncated distribution (defaults to zero)
 ##' @param sd The sd of the non-truncated distribution (defaults to 1)
-##' @references
 ##' @return the mean of the tuncated normal distribution
 ##' @author Dustin Fife
 ##' @export

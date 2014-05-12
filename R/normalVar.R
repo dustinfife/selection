@@ -8,7 +8,6 @@
 ##' @param truncMean The mean of the truncated normal. If left NULL, it will be estimated.
 ##' @param mean The mean of the non-truncated distribution (defaults to zero)
 ##' @param sd The sd of the non-truncated distribution (defaults to 1)
-##' @references
 ##' @return the variance of the tuncated normal distribution
 ##' @author Dustin Fife
 ##' @export
