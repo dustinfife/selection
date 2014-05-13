@@ -46,14 +46,12 @@ caseIIIR = function(data.matrix=NULL, rtp, rsp, rts, SR){
 
 		#### if a data matrix is supplied, compute the correlations
 	if (!is.null(data.matrix)){
-		cor.mat = cor(data.matrix)
+		cor.mat = cor(data.matrix, use="complete.obs")
 		rtp = cor.mat[2,3]; rsp = cor.mat[1,3]; rts = cor.mat[1,2]
 	}
 		##### estimate the selection ratio by integrating
 	zval = qnorm(SR)
-	mnS = integrate(normalMean, zval, Inf, mean=0, sd=1)$value /pnorm(zval, lower.tail=FALSE) 
-	ud 	= sqrt(integrate(normalVar, zval, Inf, meanS= mnS, mean=0, sd=1)$value/
-				pnorm(zval, lower.tail=FALSE))
+	ud = normalVar(zval)
 				
 		##### compute case III				
 	c.III.R = caseIII(rtp, rsp, rts, ud)
