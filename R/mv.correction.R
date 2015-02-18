@@ -6,9 +6,8 @@
 ##' @param p the number of columns used for selection
 ##' @param v.pp The variance-covariance matrix of the population selection variables
 ##' @seealso \code{\link{MASS}}
-##' @references
 ##' @return \item{}{}
-##' @author
+##' @author Dustin Fife
 ##' @export
 ##' @examples
 ##' # do a simulation to demonstrate unbiasedness of it
@@ -39,9 +38,10 @@ mv.correction = function(data, p, v.pp){
 	}
 
 	### if they supply a data matrix, convert to a variance covariance matrix
-	if (ncol(var.covar) != nrow(var.covar)){
-		var.covar = cov(var.covar)
+	if (ncol(data) != nrow(data)){
+		data = cov(data)
 	}
+	var.covar = data
 	
 	### get sufficient estimates
 	n = ncol(var.covar)
