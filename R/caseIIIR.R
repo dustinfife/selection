@@ -54,6 +54,6 @@ caseIIIR = function(data.matrix=NULL, rtp, rsp, rts, SR){
 	ud = normalVar(zval)
 				
 		##### compute case III				
-	c.III.R = caseIII(rtp, rsp, rts, ud)
+	c.III.R = caseIII(rxy=rtp, rzy=rsp, rxz=rts, uz=ud)
 	return(c.III.R)			
 }
