@@ -1,10 +1,8 @@
-#' Correct x-y correlations using Case IV
+#' Correct x/y correlations using Case IV
 #' 
 #' \code{caseIV} uses Hunter and Schmidt's (2004) correction procedure to
 #' estimate the correlation between t and p, assuming direct selection on a
 #' latent s.
-#' 
-#' I'll do this later.
 #' 
 #' @param rtpi the correlation between t and p in the incumbent pool.
 #' @param rxxi the reliability of x in the incumbent pool.
@@ -15,13 +13,9 @@
 #' @export
 #' @seealso See Also \code{\link{rel.correction}} to obtain estimates of rtpi
 #' from rxyi, \code{\link{caseIII}}, \code{\link{em}}, \code{\link{caseIIIR}}
-#' @references Hunter, J. E., & Schmidt, F. L. (2004). Methods of
+#' @references Hunter, J.E., and Schmidt, F.L. (2004). Methods of
 #' meta-analysis: Correcting error and bias in research findings. Thousand
 #' Oaks, CA: Sage.
-#' 
-#' Hunter, J. E., & Schmidt, F. L., & Le, H. (2006). Implications of direct and
-#' indirect range restriction for meta-analysis methods and findings. Journal
-#' of Applied Psychology, 91(3), 594–612. doi:10.1037/0021-9010.91.3.594
 #' @examples
 #' 
 #' 	# correct an xy correlation for unreliability

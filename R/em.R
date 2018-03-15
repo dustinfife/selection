@@ -2,8 +2,6 @@
 #' 
 #' This function estimates unattenuated correlations using the EM algorithm.
 #' 
-#' later.
-#' 
 #' @param data.matrix a matrix where the rows consist of observations and the
 #' columns consist of variables
 #' @return returns a corrected correlation between the variables
@@ -11,17 +9,15 @@
 #' @seealso See Also as \code{\link{rel.correction}} to correct the estimate
 #' for unreliability, \code{\link{caseIV}}, \code{\link{caseIIIR}},
 #' \code{\link{caseIII}}
-#' @references %% ~put references to the literature/web site here ~
 #' @export
 #' @import norm
 #' @examples
 #' 
 #' data(selection.example.data)
-#' corrected.cor.matrix = em(selection.example.data)
+#' corrected.cor.matrix = em(data.matrix(selection.example.data))
 #' corrected.cor.matrix
 em <-
 function(data.matrix){
-	require(norm)
 	ss = prelim.norm(data.matrix)
 	thetahat = em.norm(ss, showits=FALSE)
 	cor.corrected = data.frame(getparam.norm(ss, thetahat, corr=TRUE)$r)

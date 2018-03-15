@@ -1,21 +1,12 @@
-
-
-#' example data
-#' 
-#' %% ~~ A concise (1-5 lines) description of the dataset. ~~
-#' 
-#' %% ~~ If necessary, more details than the __description__ above ~~
+#' Fictitious data of a pool of applicants
 #' 
 #' @name selection.example.data
 #' @docType data
 #' @format A data frame with 30 observations on the following 5 variables.
-#' \describe{ \item{list("Cognition")}{a numeric vector}
-#' \item{list("Interview")}{a numeric vector} \item{list("Biodata")}{a numeric
-#' vector} \item{list("Performance")}{a numeric vector} \item{list("R")}{a
-#' numeric vector} }
-#' @references %% ~~ possibly secondary sources and usages ~~
-#' @source %% ~~ reference to a publication or URL from which the data were
-#' obtained ~~
+#' \describe{ \item{Cognition}{a numeric vector containing cognition scores}
+#' \item{Interview}{a numeric vector indicating the ratings of interview performance} \item{Biodata}{a numeric
+#' vector indicating some measure of Biodata} \item{Performance}{Interview performance} \item{R}{a
+#' Subjective ranking of applicants} }
 #' @keywords datasets
 #' @examples
 #' 

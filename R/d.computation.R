@@ -20,7 +20,7 @@ d.computation = function(y,group, short=TRUE, target.group=NULL){
 	if (!is.null(target.group)){
 		g1 = which(as.character(group)==target.group);g2 = which(as.character(group)!=target.group)		
 	} else {
-		g1 = which(as.character(group)==levs[1]);g2 = which(as.character(group)!=levs[2])		
+		g1 = which(as.character(group)==levs[1]);g2 = which(as.character(group)!=levs[1])		
 	}
 	n1 = length(g1); n2=length(g2)
 	var1 = var(y[g1]);var2=var(y[g2])

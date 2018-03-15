@@ -6,7 +6,7 @@
 ##' @param rxxi the reliability estimate of x in the incumbent (restricted) population
 ##' @param rxxa the reliability estimate of x in the applicant (unrestricted) population
 ##' @param ux The unrestricted variance of X
-##' @seealso \code{\link{case.IV}}
+##' @seealso \code{\link{caseIV}}
 ##' @return a value indicating the unresticted variance of T
 ##' @author Dustin Fife
 ##' @export

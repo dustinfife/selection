@@ -42,7 +42,8 @@
 #' new.dat = selection.example.data[!is.na(selection.example.data$Performance),]
 #' cor.mat = cor(new.dat[,c("R", "Biodata", "Performance")])
 #' 	# correct assuming direct selection on R, indirect on biodata, and a dv of performance
-#' corrected = caseIII(rxy=cor.mat[1,3], rzy=cor.mat[2,3], rxz=cor.mat[1,2], uz = sd(new.dat$R)/sd(selection.example.data$R))	
+#' corrected = caseIII(rxy=cor.mat[1,3], rzy=cor.mat[2,3], 
+##' 		rxz=cor.mat[1,2], uz = sd(new.dat$R)/sd(selection.example.data$R))	
 #' corrected
 #' ## do a simulation to show it works
 #' cor.mat = matrix(c(1, .3, .4, 
