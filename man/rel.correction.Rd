@@ -29,4 +29,3 @@ returns a scalar that is the corrected correlation.
 \author{
 Dustin Fife
 }
-

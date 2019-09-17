@@ -18,8 +18,8 @@
 #' corrected.cor.matrix
 em <-
 function(data.matrix){
-	ss = prelim.norm(data.matrix)
-	thetahat = em.norm(ss, showits=FALSE)
+	ss = norm::prelim.norm(data.matrix)
+	thetahat = norm::em.norm(ss, showits=FALSE)
 	cor.corrected = data.frame(getparam.norm(ss, thetahat, corr=TRUE)$r)
 	if (!is.null(names(data.matrix))){
 		names(cor.corrected) = names(data.matrix)

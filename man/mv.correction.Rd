@@ -46,7 +46,6 @@ cor = matrix(c(1, .703, .527, .499, .777,
 			.527, .404, 1, .253, .578,
 			.499, .555, .253, 1, .427,
 			.777, .679, .578, .427, 1), nrow=5)
-require(fifer) ### for cor2cov function
 v = cor2cov(cor, sd=c(9.93, 9.39, 8.80, 7.19, 8.05))
 ### change order so selection variables occur first
 ord = c(5,1,2,3,4)
@@ -61,10 +60,9 @@ v.star = matrix(c(
 	14.46, 23.90, 31.24, 4.71, 48.31), ncol=5)
 mv.correction(v.star, p=2, v.pp = v[1:2, 1:2])
 }
-\author{
-Dustin Fife
-}
 \references{
 Birnbaum, Z. W., Paulson, E., & Andrews, F. C. (1950). On the effect of selection performed on some coordinates of a multi-dimensional population. Psychometrika, 15(2), 191-204.
 }
-
+\author{
+Dustin Fife
+}

@@ -31,9 +31,6 @@ latent s.
 	# estimate Case IV
 	caseIV(rtpi=rtpi, rxxi=.6, rxxa=.8, ux=.8)
 }
-\author{
-Dustin Fife
-}
 \references{
 Hunter, J.E., and Schmidt, F.L. (2004). Methods of
 meta-analysis: Correcting error and bias in research findings. Thousand
@@ -43,4 +40,6 @@ Oaks, CA: Sage.
 See Also \code{\link{rel.correction}} to obtain estimates of rtpi
 from rxyi, \code{\link{caseIII}}, \code{\link{em}}, \code{\link{caseIIIR}}
 }
-
+\author{
+Dustin Fife
+}

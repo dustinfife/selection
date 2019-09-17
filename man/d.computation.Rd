@@ -33,4 +33,3 @@ d.computation(iris$Petal.Width, iris$Species, short=FALSE)
 \author{
 Dustin Fife
 }
-

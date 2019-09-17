@@ -33,4 +33,3 @@ mean(x[x>0])
 \author{
 Dustin Fife
 }
-

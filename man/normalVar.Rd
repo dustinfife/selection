@@ -35,4 +35,3 @@ var(x[x>1])
 \author{
 Dustin Fife
 }
-

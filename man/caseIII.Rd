@@ -62,9 +62,6 @@ data = mvrnorm(100000, mu=c(0,0,0), Sigma = cor.mat)
 data[data[,1]<.5, 2:3] = NA
 caseIII(data=data, x=2, y=3, z=1)
 }
-\author{
-Dustin Fife
-}
 \references{
 Thorndike, R. L. (1949). Personnel selection: Test and
 measurement techniques. Oxford, England: Wiley.
@@ -78,4 +75,6 @@ A, Containing Papers of a Mathematical or Physical Character, 200, 1-66.
 \code{\link{caseIV}}, \code{\link{caseIIIR}}, \code{\link{em}},
 \code{\link{rel.correction}}
 }
-
+\author{
+Dustin Fife
+}

@@ -6,7 +6,6 @@
 ##' @param p the number of columns used for selection
 ##' @param v.pp The variance-covariance matrix of the population selection variables
 ##' @author Dustin Fife
-##' @importFrom fifer cor2cov
 ##' @export
 ##' @references Birnbaum, Z. W., Paulson, E., & Andrews, F. C. (1950). On the effect of selection performed on some coordinates of a multi-dimensional population. Psychometrika, 15(2), 191-204.
 ##' @examples
@@ -37,7 +36,6 @@
 ##'				.527, .404, 1, .253, .578,
 ##'				.499, .555, .253, 1, .427,
 ##'				.777, .679, .578, .427, 1), nrow=5)
-##' require(fifer) ### for cor2cov function
 ##' v = cor2cov(cor, sd=c(9.93, 9.39, 8.80, 7.19, 8.05))
 ##' ### change order so selection variables occur first
 ##' ord = c(5,1,2,3,4)

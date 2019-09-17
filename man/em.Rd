@@ -22,12 +22,11 @@ data(selection.example.data)
 corrected.cor.matrix = em(data.matrix(selection.example.data))
 corrected.cor.matrix
 }
-\author{
-Dustin Fife
-}
 \seealso{
 See Also as \code{\link{rel.correction}} to correct the estimate
 for unreliability, \code{\link{caseIV}}, \code{\link{caseIIIR}},
 \code{\link{caseIII}}
 }
-
+\author{
+Dustin Fife
+}

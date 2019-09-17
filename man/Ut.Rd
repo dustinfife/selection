@@ -23,10 +23,9 @@ the unrestricted variance of T.
 \examples{
 Ut(.6, .8, 1.5)
 }
-\author{
-Dustin Fife
-}
 \seealso{
 \code{\link{caseIV}}
 }
-
+\author{
+Dustin Fife
+}

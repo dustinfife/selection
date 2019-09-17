@@ -17,10 +17,9 @@ Convert r into cohen's d
 \examples{
 r.to.d(.3, p=.3)
 }
-\author{
-Dustin Fife
-}
 \seealso{
 \code{\link{d.to.r}}
 }
-
+\author{
+Dustin Fife
+}

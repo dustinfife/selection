@@ -26,4 +26,3 @@ Correct Cohen's d Using the Pearson Lawley
 \author{
 Dustin Fife
 }
-

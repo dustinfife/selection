@@ -19,4 +19,3 @@ data(selection.example.data)
 
 }
 \keyword{datasets}
-

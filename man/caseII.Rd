@@ -33,9 +33,6 @@ corrected = caseII(rxy=.5, sx=1.5, sxs=.9)
 corrected
 
 }
-\author{
-Dustin Fife
-}
 \references{
 Thorndike, R. L. (1949). Personnel selection: Test and
 measurement techniques. Oxford, England: Wiley.
@@ -49,4 +46,6 @@ A, Containing Papers of a Mathematical or Physical Character, 200, 1-66.
 \code{\link{caseIV}}, \code{\link{caseIIIR}}, \code{\link{em}},
 \code{\link{rel.correction}}
 }
-
+\author{
+Dustin Fife
+}
