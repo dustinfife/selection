@@ -49,7 +49,7 @@
 #' cor.mat = matrix(c(1, .3, .4, 
 #' 					.3, 1, .5,
 #' 					.4, .5, 1), nrow=3)
-#' data = mvrnorm(100000, mu=c(0,0,0), Sigma = cor.mat)					
+#' data = MASS::mvrnorm(100000, mu=c(0,0,0), Sigma = cor.mat)					
 #' ### restrict the data
 #' data[data[,1]<.5, 2:3] = NA
 #' caseIII(data=data, x=2, y=3, z=1)

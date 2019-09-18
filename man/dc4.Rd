@@ -19,6 +19,8 @@ dc4(data, grouping.var, rxxa = NULL)
 
 \item{rxxi}{The reliability at the incumbent (selected) level}
 
+\item{sd.x.pop}{The population standard deviation of x}
+
 \item{grouping.var}{The name of the grouping variable (surrounded by quotes)}
 
 \item{rxxa}{Optional. The value of the reliability at the population level (to correct for unreliability)}

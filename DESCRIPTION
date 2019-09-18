@@ -8,5 +8,5 @@ Author: Dustin Fife
 Maintainer: Dustin Fife <fife.dustin@gmail.com>
 License: GPL-2
 Depends:
-    norm
+    norm, mix, MASS
 RoxygenNote: 6.1.1

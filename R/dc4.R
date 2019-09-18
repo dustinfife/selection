@@ -6,6 +6,7 @@
 ##' @param grouping.var The categorical variable that indicates group membership
 ##' @param rxxa The reliability at the applicant (population) level
 ##' @param rxxi The reliability at the incumbent (selected) level
+##' @param sd.x.pop The population standard deviation of x
 ##' @author Dustin Fife
 ##' @export
 ##' @examples
@@ -59,9 +60,9 @@ dc4 = function(data, grouping.var, rxxa=NULL){
 		#### identify location of grouping variable
 	require(mix); 
 	data[,1] = factor(data[,1])
-	ss = prelim.mix(data.matrix(data), 1)
-	thetahat = em.mix(ss)
-	em.est = getparam.mix(ss,thetahat, corr=TRUE)
+	ss = mix::prelim.mix(data.matrix(data), 1)
+	thetahat = mix::em.mix(ss)
+	em.est = mix::getparam.mix(ss,thetahat, corr=TRUE)
 	if (!is.null(rxxa)){
 		em.d = diff(em.est$mu[outcome.var,])/em.est$sdv[outcome.var]/sqrt(rxx)
 	} else {
