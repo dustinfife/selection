@@ -44,7 +44,11 @@ summarize_imputation = function(i, imp, formula, pred_method, vars, invert=FALSE
         mean_dv_old = mean(old.data[,vars$dv], na.rm=TRUE)
     }
     
-    return.list = data.frame(t(unlist(list(mean_dv_old = mean_dv_old, mean_dv = mean_dv, percent_agreement=selection_differences, model_selected_current$raw.coefficients))))
+    return.list = data.frame(t(unlist(list(
+        mean_dv_old = mean_dv_old, 
+        mean_dv = mean_dv, 
+        percent_agreement=selection_differences, 
+        model_selected_current$raw.coefficients))))
     names(return.list) = c("current_mean_dv", "new_mean_dv", "percent_agreement", row.names(model_selected_current))
     return.list
 }
