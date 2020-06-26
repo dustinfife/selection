@@ -1,4 +1,4 @@
-summarize_imputation = function(i, imp, formula, pred_method, vars, invert=FALSE){
+summarize_imputation = function(i, imp, formula, pred_method, vars, invert=FALSE, models=FALSE){
     #browser()
     new.data = mice::complete(imp, i)
     old.data = imp$data
@@ -19,7 +19,7 @@ summarize_imputation = function(i, imp, formula, pred_method, vars, invert=FALSE
     neworder = order(new.data$suitability_new, decreasing = !invert)
     new.data = new.data[neworder,]
     old.data = old.data[neworder,]
-    head(new.data)
+    #head(new.data)
     
     ### select top N scores
     top.n = nrow(new.data) - imp$nmis[vars$dv]
@@ -50,7 +50,12 @@ summarize_imputation = function(i, imp, formula, pred_method, vars, invert=FALSE
         percent_agreement=selection_differences, 
         model_selected_current$raw.coefficients))))
     names(return.list) = c("current_mean_dv", "new_mean_dv", "percent_agreement", row.names(model_selected_current))
-    return.list
+    
+    if (models){
+        return(list(model_selected_optimal=model_selected_optimal, model_selected_current=model_selected_current))
+    } else {
+        return.list
+    }
 }
 
 

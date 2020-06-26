@@ -42,7 +42,7 @@ maximizeDV = function(formula, data, method=c("regression", "logistic", "poisson
     
     ## subset data to only those available
     d = data[,vars$variables]
-    #browser()
+    
     ## build the imputation model
     if (method_used == "poisson"){
         imp = countimp::countimp(d, m=imputations, print=FALSE)
@@ -66,8 +66,15 @@ maximizeDV = function(formula, data, method=c("regression", "logistic", "poisson
     results$x = 1
     final_results = results %>% dplyr::summarize_all(list(mean))
     
-    ### get range of y axis
-    
+    ## output regression models
+    #browser()
+    regression_models = summarize_imputation(i=1, 
+                                             imp=imp, 
+                                            formula=formula, 
+                                            pred_method=method_used, 
+                                            vars=vars, 
+                                            invert=reverse, 
+                                            models=TRUE)
     
     ### do a plot of the DV
     if (method=="logistic") ylab = paste0("Proportion who ", vars$dv) else ylab = vars$dv
@@ -79,7 +86,7 @@ maximizeDV = function(formula, data, method=c("regression", "logistic", "poisson
         ggplot2::theme(axis.ticks = ggplot2::element_blank(), 
               axis.text.x = ggplot2::element_blank()) +
         ggplot2::labs(y=ylab, x="")
-    ?geom_text
+    
     ### get range of y axis
     plot_range = (ggplot2::layer_scales(dv_plot)$y$range$range)
     offset = .05*diff(plot_range)
@@ -97,12 +104,19 @@ maximizeDV = function(formula, data, method=c("regression", "logistic", "poisson
                                    hjust = 0,
                                    vjust = v) 
     
-    attr(final_results, "class") = "selection"
+    a = list(current_mean = final_results$current_mean_dv, 
+             optimal_mean = final_results$new_mean_dv, 
+             percent_agreement = final_results$percent_agreement,
+             optimal_model = regression_models$model_selected_optimal,
+             current_model = regression_models$model_selected_current,
+             plot = dv_plot)
+    
+    attr(a, "class") = "selection"
     if (plot){
         print(dv_plot)
-        return(final_results)
+        return(a)
     } else {
-        return(final_results)
+        return(a)
     }
 }
 
@@ -115,25 +129,9 @@ maximizeDV = function(formula, data, method=c("regression", "logistic", "poisson
 #' @param ... ignored
 #' @export
 print.selection = function(x,...){
-    regpar = (x[-c(1:3, length(x))])
-    cat(paste0("                           Current mean: ", round(x$current_mean_dv, digits=3), "\n"))
-    cat(paste0("  Estimated mean (under optimal system): ", round(x$new_mean_dv, digits=3), "\n"))
+    cat(paste0("                           Current mean: ", round(x$current_mean, digits=3), "\n"))
+    cat(paste0("  Estimated mean (under optimal system): ", round(x$optimal_mean, digits=3), "\n"))
     cat(paste0("Percent agreement (between two systems): ", round(x$percent_agreement, digits=3), "\n"))
-    cat("\n")
-    cat(paste0("Regression parameters (these estimate the weights under the CURRENT system):\n"))
-    maxchar = max(sapply(names(regpar), nchar))
-    for (i in 1:length(regpar)){
-        # count characters
-        currentchar = nchar(names(regpar)[i])
-        spaces = maxchar - currentchar
-        spaces_char = paste0(rep(" ", times=spaces), collapse="")
-        if (regpar[i]<0){
-            cat(paste0(spaces_char, names(regpar)[i], ": ", regpar[i], "\n"))
-        } else {
-            cat(paste0(spaces_char, names(regpar)[i], ":  ", regpar[i], "\n"))
-        }
-    }
-
     cat("\n")
     cat(paste0("Objects stored in this list:\n", paste0(names(x), collapse = ", ")))
 }
