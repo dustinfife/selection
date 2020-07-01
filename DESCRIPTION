@@ -7,6 +7,6 @@ Date: 2019-09-17
 Author: Dustin Fife
 Maintainer: Dustin Fife <fife.dustin@gmail.com>
 License: GPL-2
-Depends:
-    norm, mix, MASS
+Imports:
+    norm, MASS
 RoxygenNote: 6.1.1
