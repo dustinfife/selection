@@ -7,7 +7,8 @@
 #    http://shiny.rstudio.com/
 #
 try(devtools::install_github('dustinfife/flexplot'))
-try(devtools::install_github('dustinfife/selection', force=TRUE))
+try(devtools::install_github('dustinfife/selection', force=TRUE, ref="development"))
+try(devtools::install_github("kkleinke/countimp"))
 require(flexplot)
 require(selection)
 
