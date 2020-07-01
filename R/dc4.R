@@ -49,7 +49,9 @@ dc4 = function(predictor.var, grouping.var, rxxa, rxxi, sd.x.pop){
 ##' @param rxxa Optional. The value of the reliability at the population level (to correct for unreliability)
 ##' @author Dustin Fife
 ##' @export
-##' @import mix
+##' @importFrom mix prelim
+##' @importFrom mix em.mix
+##' @importFrom mix getparam.mix
 dc4 = function(data, grouping.var, rxxa=NULL){
 
 		#### reorder data so grouping variable comes first

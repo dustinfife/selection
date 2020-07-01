@@ -1,0 +1,12 @@
+name: maximize_criterion_shiny
+title: maximize_criterion_shiny
+username:
+account: dustinfife
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2526812
+bundleId: 3340720
+url: https://dustinfife.shinyapps.io/maximize_criterion_shiny/
+when: 1593635100.49279
+asMultiple: FALSE
+asStatic: FALSE

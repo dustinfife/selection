@@ -6,6 +6,10 @@
 #
 #    http://shiny.rstudio.com/
 #
+try(devtools::install_github('dustinfife/flexplot'))
+try(devtools::install_github('dustinfife/selection', force=TRUE))
+require(flexplot)
+require(selection)
 
 myData <- NULL
 

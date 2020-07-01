@@ -10,7 +10,9 @@
 #' for unreliability, \code{\link{caseIV}}, \code{\link{caseIIIR}},
 #' \code{\link{caseIII}}
 #' @export
-#' @import norm
+#' @importFrom norm prelim.norm
+#' @importFrom norm em.norm
+#' @importFrom norm getparam.norm
 #' @examples
 #' 
 #' data(selection.example.data)

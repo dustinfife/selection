@@ -1,0 +1,12 @@
+name: maximize_dv_shiny
+title: maximize_dv_shiny
+username:
+account: dustinfife
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2526822
+bundleId: 3340776
+url: https://dustinfife.shinyapps.io/maximize_dv_shiny/
+when: 1593635666.15399
+asMultiple: FALSE
+asStatic: FALSE
