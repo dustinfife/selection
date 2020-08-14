@@ -2,11 +2,11 @@ Package: selection
 Title: Correcting Biased Estimates Under Selection
 Description: A collection of functions for correcting biased estimates under
     selection (range restriction).
-Version: 0.1.1
+Version: 0.2.1
 Date: 2019-09-17
 Author: Dustin Fife
 Maintainer: Dustin Fife <fife.dustin@gmail.com>
 License: GPL-2
-Depends:
-    norm, mix, MASS
-RoxygenNote: 6.1.1
+Imports:
+    norm, MASS, countimp, magrittr, purrr, tidyr
+RoxygenNote: 7.1.1

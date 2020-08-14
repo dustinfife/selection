@@ -37,4 +37,5 @@
 #            JP = ifelse(Selected==0, NA, JP),
 #            Quit = ifelse(Selected==0, NA, Quit))
 # 
+# write.csv(selection_data, file="/Users/fife/Dropbox/selection_data.csv", row.names=F)
 # usethis::use_data(selection_data, overwrite=TRUE)

@@ -4,8 +4,13 @@
 \alias{maximizeDV}
 \title{Estimate the maximum value of a criterion under optimal selection}
 \usage{
-maximizeDV(formula, data, method = c("regression", "logistic",
-  "poisson"), imputations = 30, plot = TRUE)
+maximizeDV(
+  formula,
+  data,
+  method = c("regression", "logistic", "poisson"),
+  imputations = 30,
+  plot = TRUE
+)
 }
 \arguments{
 \item{formula}{A equation of the form y~x1 + x2... The Y is the value to be maximized by optimizing selection}
@@ -19,6 +24,24 @@ to the criterion}
 
 \item{plot}{Should a plot be returned? Defaults to TRUE.}
 }
+\value{
+both a vector and a plot. 
+
+For the plot, The plot shows a scatterplot. The horizontal line on the plot is the estimate 
+(e.g., proportion who quit, mean of the criterion) under the current system. Each dot represents 
+the estimate under a different imputation.
+
+The vector returns the current mean (under the current selection system), the mean under the optimal system,
+and the proportion of individuals the two methods (old versus optimal) agree on. The vector also returns the regression
+coefficients under a model predicting who was selected based on the predictors.
+}
 \description{
 Estimate the maximum value of a criterion under optimal selection
+}
+\examples{
+data(selection_data)
+maximizeDV(Quit~IQ + Biodata + Conscientiousness + Interview, data=selection_data, method="logistic")
+testthat::expect_error(maximizeDV(Absences~IQ + Biodata + Conscientiousness + Interview, data=selection_data, method="logistic"))
+maximizeDV(Absences~IQ + Biodata + Conscientiousness + Interview, data=selection_data, method="poisson")
+maximizeDV(JP~IQ + Biodata + Conscientiousness + Interview, data=selection_data)
 }
