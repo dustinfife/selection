@@ -4,11 +4,13 @@
 \name{selection.example.data}
 \alias{selection.example.data}
 \title{Fictitious data of a pool of applicants}
-\format{A data frame with 30 observations on the following 5 variables.
+\format{
+A data frame with 30 observations on the following 5 variables.
 \describe{ \item{Cognition}{a numeric vector containing cognition scores}
 \item{Interview}{a numeric vector indicating the ratings of interview performance} \item{Biodata}{a numeric
 vector indicating some measure of Biodata} \item{Performance}{Interview performance} \item{R}{a
-Subjective ranking of applicants} }}
+Subjective ranking of applicants} }
+}
 \description{
 Fictitious data of a pool of applicants
 }

@@ -6,12 +6,13 @@
 #
 #    http://shiny.rstudio.com/
 #
+Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS=TRUE)
 try(devtools::install_github('dustinfife/flexplot'))
-try(devtools::install_github('dustinfife/selection', force=TRUE, ref="development"))
+try(devtools::install_github('dustinfife/selection', ref="development"))
 try(devtools::install_github("kkleinke/countimp"))
 require(flexplot)
 require(selection)
-
+require(countimp)
 myData <- NULL
 
 

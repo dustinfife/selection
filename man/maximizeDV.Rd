@@ -4,8 +4,13 @@
 \alias{maximizeDV}
 \title{Estimate the maximum value of a criterion under optimal selection}
 \usage{
-maximizeDV(formula, data, method = c("regression", "logistic",
-  "poisson"), imputations = 30, plot = TRUE)
+maximizeDV(
+  formula,
+  data,
+  method = c("regression", "logistic", "poisson"),
+  imputations = 30,
+  plot = TRUE
+)
 }
 \arguments{
 \item{formula}{A equation of the form y~x1 + x2... The Y is the value to be maximized by optimizing selection}

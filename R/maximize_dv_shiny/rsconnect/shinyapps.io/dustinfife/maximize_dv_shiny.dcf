@@ -5,8 +5,8 @@ account: dustinfife
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2526822
-bundleId: 3340972
+bundleId: 3341013
 url: https://dustinfife.shinyapps.io/maximize_dv_shiny/
-when: 1593638339.62639
+when: 1593639071.11479
 asMultiple: FALSE
 asStatic: FALSE
